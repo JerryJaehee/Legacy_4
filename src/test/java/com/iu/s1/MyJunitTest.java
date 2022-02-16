@@ -10,9 +10,5 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/**/*-context.xml"})
 public class MyJunitTest {
 
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-
+	
 }
