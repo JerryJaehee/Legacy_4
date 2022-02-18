@@ -4,19 +4,20 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
 <mapper namespace="com.iu.s1.bankbook.BankBookDAO">
-	<select id="detail" resultType="com.iu.s1.bankbook.BankBookDTO" parameterType="java.lang.Long">
-		SELECT * FROM BANKBOOK WHERE BOOKNUMBER= #{num}
+
+	<select id="detail" resultType="BankBookDTO" parameterType="BankBookDTO">
+		SELECT * FROM BANKBOOK WHERE BOOKNUMBER= #{bookNumber}
 	</select>
 	
-	<select id="list" resultType="com.iu.s1.bankbook.BankBookDTO">
+	<select id="list" resultType="BankBookDTO">
 		SELECT * FROM BANKBOOK
 	</select>
 	
-	<insert id="add" parameterType="com.iu.s1.bankbook.BankBookDTO">
+	<insert id="add" parameterType="BankBookDTO">
 		INSERT INTO BANKBOOK VALUES(BANKBOOK_SEQ.nextval, #{bookName}, #{bookContents}, #{bookRate}, #{bookSale})
 	</insert>
 	
-	<delete id="delete" parameterType="com.iu.s1.bankbook.BankBookDTO">
+	<delete id="delete" parameterType="BankBookDTO">
 		DELETE BANKBOOK WHERE BOOKNUMBER= #{bookNumber}
 	</delete>
 </mapper>
