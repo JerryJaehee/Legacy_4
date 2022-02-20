@@ -6,7 +6,7 @@ import java.sql.Date;
 public class NoticeDTO {
 	private Integer num;
 	private String title;
-	private String Contents;
+	private String contents;
 	private String writer;
 	private Date regDate;
 	private Integer hit;
@@ -23,11 +23,12 @@ public class NoticeDTO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getContents() {
-		return Contents;
+		return contents;
 	}
 	public void setContents(String contents) {
-		Contents = contents;
+		this.contents = contents;
 	}
 	public String getWriter() {
 		return writer;
