@@ -35,4 +35,10 @@ public class BankBookService {
 		
 		return bankBookDAO.detail(bankBookDTO);
 	}
+	
+	//delete
+	public int delete(BankBookDTO bankBookDTO) throws Exception {
+		
+		return bankBookDAO.delete(bankBookDTO);
+	}
 }

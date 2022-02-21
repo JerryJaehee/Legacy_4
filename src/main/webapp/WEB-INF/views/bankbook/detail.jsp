@@ -16,5 +16,6 @@
 	<h3>판매여부 : ${dto.bookSale}</h3>
 	
 	<a href="./list">List</a>
+	<a href="./delete?bookNumber=${dto.bookNumber}">Delete</a>
 </body>
 </html>
