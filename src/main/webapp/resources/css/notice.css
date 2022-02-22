@@ -1,0 +1,16 @@
+table {
+    width: 70%;
+    margin : 0 auto;
+    border-collapse:collapse;
+}
+
+table > thead {
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.subject {
+    width :600px;
+}
