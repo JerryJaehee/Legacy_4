@@ -23,7 +23,7 @@ public class Pager {
 	}
 	
 	public void makeNum(Long totalCount) {
-		// 1. 전체 row의 갯수 구하기
+		// 1. 전체 row의 갯수 구하기 - 매개변수로 받아오기
 		
 		// 2. 전체 page의 갯수 구하기
 		Long totalPage = totalCount/this.getPerPage();
@@ -36,7 +36,7 @@ public class Pager {
 		
 		// 4. 전체 block의 갯수 구하기
 		Long totalBlock = totalPage / perBlock;
-		if(totalPage % totalBlock != 0) {
+		if(totalPage % perBlock != 0) {
 			totalBlock++;
 		}
 		
