@@ -11,18 +11,19 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.iu.s1.MyJunitTest;
+import com.iu.s1.bankbook.BankBookDTO;
 
 public class NoticeDAOTest extends MyJunitTest{
 	
 	@Autowired
 	private NoticeDAO noticeDAO;
 	
-	@Test
+	//@Test
 	public void check() {
 		assertNotNull(noticeDAO);
 	}
 
-	@Test
+	//@Test
 	public void listTest() throws Exception {
 		List<NoticeDTO> ar = noticeDAO.list();
 		assertNotEquals(0, ar.size());
@@ -30,13 +31,15 @@ public class NoticeDAOTest extends MyJunitTest{
 	
 	@Test
 	public void addTest() throws Exception {
-		NoticeDTO noticeDTO = new NoticeDTO();
-		noticeDTO.setTitle("title2");
-		noticeDTO.setContents("contents2");
-		noticeDTO.setWriter("writer2");
-		noticeDTO.setHit(2);
-		int result = noticeDAO.add(noticeDTO);
-		assertEquals(1, result);
+		for(int i=0;i<200;i++) {
+			NoticeDTO noticeDTO = new NoticeDTO();
+			noticeDTO.setTitle("title"+i);
+			noticeDTO.setContents("Contents"+i);
+			
+			bankBookDTO.setBookSale(1);
+			int result = bankBookDAO.add(bankBookDTO);
+		}
+		System.out.println("Insert Finish");
 	}
 	
 	//@Test
