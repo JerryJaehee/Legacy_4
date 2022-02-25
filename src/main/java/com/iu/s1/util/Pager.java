@@ -10,6 +10,10 @@ public class Pager {
 	// 끝 번호
 	private Long lastRow;
 	
+	//-----------검색 사용 변수 -----------
+	private String search;
+	private String kind;
+	
 	//-----------jsp 사용 변수 ------------
 	private Long startNum;
 	private Long lastNum;
@@ -150,6 +154,30 @@ public class Pager {
 		this.next = next;
 	}
 
+	public String getSearch() {
+		//검색어가 없으면 search=null
+		if(this.search == null) {
+			this.search = "";
+		}
+		//this.search = "%"+this.search+"%";
+		
+		return search;
+	}
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+	
+	
+	
 	
 	
 }
