@@ -80,6 +80,10 @@ public class Pager {
 		// 8. 현재 블럭이 마지막 블럭번호와 같다면
 		if(curBlock == totalBlock)
 			this.lastNum= totalPage;
+		
+		// 9. 검색결과가 없어서 Total이 0일때
+		if(totalCount == 0)
+			this.lastNum = 1L;
 	}
 
 	public Long getPerPage() {
