@@ -23,7 +23,7 @@
 						</c:when>
 						<c:otherwise>
 							<li><a href="/s1/member/login">login<span class="material-icons-outlined icon">login</span></a></li>
-							<li><a href="/s1/member/join">join<span class="material-icons-outlined icon">person_add_alt</span></a></li>
+							<li><a href="/s1/member/joinCheck">join<span class="material-icons-outlined icon">person_add_alt</span></a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
