@@ -1,20 +1,19 @@
-package com.iu.s1.notice;
-
+package com.iu.s1.board;
 
 import java.sql.Date;
 
-public class NoticeDTO {
-	private Integer num;
+public class BoardDTO {
+	private Long num;
 	private String title;
 	private String contents;
 	private String writer;
 	private Date regDate;
-	private Integer hit;
+	private Long hit;
 	
-	public Integer getNum() {
+	public Long getNum() {
 		return num;
 	}
-	public void setNum(Integer num) {
+	public void setNum(Long num) {
 		this.num = num;
 	}
 	public String getTitle() {
@@ -23,7 +22,6 @@ public class NoticeDTO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 	public String getContents() {
 		return contents;
 	}
@@ -42,13 +40,11 @@ public class NoticeDTO {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	public Integer getHit() {
+	public Long getHit() {
 		return hit;
 	}
-	public void setHit(Integer hit) {
+	public void setHit(Long hit) {
 		this.hit = hit;
 	}
-
 	
 }
-

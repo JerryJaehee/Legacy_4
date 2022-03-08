@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.iu.s1.MyJunitTest;
+import com.iu.s1.board.notice.NoticeDAO;
+import com.iu.s1.board.notice.NoticeDTO;
 
 public class NoticeDAOTest extends MyJunitTest{
 	
@@ -34,7 +36,7 @@ public class NoticeDAOTest extends MyJunitTest{
 		noticeDTO.setTitle("title2");
 		noticeDTO.setContents("contents2");
 		noticeDTO.setWriter("writer2");
-		noticeDTO.setHit(2);
+		noticeDTO.setHit(2L);
 		int result = noticeDAO.add(noticeDTO);
 		assertEquals(1, result);
 	}
@@ -42,7 +44,7 @@ public class NoticeDAOTest extends MyJunitTest{
 	//@Test
 	public void detailTest() throws Exception {
 		NoticeDTO noticeDTO = new NoticeDTO();
-		noticeDTO.setNum(3);
+		noticeDTO.setNum(3L);
 		noticeDTO = noticeDAO.detail(noticeDTO);
 		assertNotNull(noticeDTO);
 	}
@@ -50,7 +52,7 @@ public class NoticeDAOTest extends MyJunitTest{
 	//@Test
 	public void deleteTest() throws Exception {
 		NoticeDTO noticeDTO = new NoticeDTO();
-		noticeDTO.setNum(3);
+		noticeDTO.setNum(3L);
 		int result = noticeDAO.delete(noticeDTO);
 		assertEquals(1, result);
 	}
