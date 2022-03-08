@@ -8,32 +8,43 @@
 </head>
 <body>
 	<h1>Member Join Page</h1>
-	<form action="./join" method="post">
-		<fieldset>
-			<legend>ID</legend>
-			<input type="text" name="id">
-		</fieldset>
-		<fieldset>
-			<legend>Password</legend>
-			<input type="password" name="pw">
-		</fieldset>
-		<fieldset>
-			<legend>이름</legend>
-			<input type="text" name="name">
-		</fieldset>
-		<fieldset>
-			<legend>핸드폰 번호</legend>
-			<input type="text" name="phone">
-		</fieldset>
-		<fieldset>
-			<legend>이메일 주소</legend>
-			<input type="email" name="email">
-		</fieldset>
-		<fieldset>
-			<button type="submit">JOIN</button>
-		</fieldset>
+	<div>
+		<form action="./join" method="post" id="frm">
+			<fieldset>
+				<legend>ID</legend>
+				<input type="text" name="id" id="idx">
+				<div id="idResult"></div>
+			</fieldset>
+			<fieldset>
+				<legend>Password</legend>
+				<input type="password" id="pw" name="pw" placeholder="8글자 이상 12글자 이하">
+				<div id="pwResult"></div>
+			</fieldset>
+			<fieldset>
+				<legend>Password 확인</legend>
+				<input type="password" id="pw2" name="pw2" placeholder="8글자 이상 12글자 이하">
+				<div id="pwResult2"></div>
+			</fieldset>
+			<fieldset>
+				<legend>이름</legend>
+				<input type="text" name="name" id="name">
+			</fieldset>
+			<fieldset>
+				<legend>핸드폰 번호</legend>
+				<input type="text" name="phone" id="phone">
+			</fieldset>
+			<fieldset>
+				<legend>이메일 주소</legend>
+				<input type="email" name="email" id="email">
+			</fieldset>
+			<fieldset>
+				<button type="button" id="btn">JOIN</button>
+			</fieldset>
+		
+		</form>
+	</div>
 	
-	</form>
+	<script type="text/javascript" src="../resources/js/join2.js"></script>
 	
 </body>
 </html>
