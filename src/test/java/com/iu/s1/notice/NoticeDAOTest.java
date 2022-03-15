@@ -24,12 +24,12 @@ public class NoticeDAOTest extends MyJunitTest{
 		assertNotNull(noticeDAO);
 	}
 
-	@Test
-	public void listTest() throws Exception {
-		List<NoticeDTO> ar = noticeDAO.list();
-		assertNotEquals(0, ar.size());
-	}
-	
+//	@Test
+//	public void listTest() throws Exception {
+//		List<NoticeDTO> ar = noticeDAO.list();
+//		assertNotEquals(0, ar.size());
+//	}
+//	
 	@Test
 	public void addTest() throws Exception {
 		NoticeDTO noticeDTO = new NoticeDTO();
@@ -41,13 +41,13 @@ public class NoticeDAOTest extends MyJunitTest{
 		assertEquals(1, result);
 	}
 	
-	//@Test
-	public void detailTest() throws Exception {
-		NoticeDTO noticeDTO = new NoticeDTO();
-		noticeDTO.setNum(3L);
-		noticeDTO = noticeDAO.detail(noticeDTO);
-		assertNotNull(noticeDTO);
-	}
+//	//@Test
+//	public void detailTest() throws Exception {
+//		NoticeDTO noticeDTO = new NoticeDTO();
+//		noticeDTO.setNum(3L);
+//		noticeDTO = noticeDAO.detail(noticeDTO);
+//		assertNotNull(noticeDTO);
+//	}
 	
 	//@Test
 	public void deleteTest() throws Exception {
