@@ -20,10 +20,16 @@
 	<h3>작성자 : ${dto.writer}</h3>
 	<h3>작성일 : ${dto.regDate}</h3>
 	<h3>조회수 : ${dto.hit}</h3>
-	
+	<div>
+		<c:forEach items="${dto.fileDTOs}" var="f">
+			<a href="./fileDown?fileNum=${f.fileNum}">${f.oriName}</a>		
+		</c:forEach>
+	</div>
 	<a href="./list">List</a>
 	<a href="./update?num=${dto.num}">Update</a>
 	<a href="./delete?num=${dto.num}">Delete</a>
-	<a href="./reply?num=${dto.num}">Reply</a>
+		<c:if test="${board ne 'notice'}">
+		<a href="./reply?num=${dto.num}">Reply</a>
+	</c:if>
 </body>
 </html>

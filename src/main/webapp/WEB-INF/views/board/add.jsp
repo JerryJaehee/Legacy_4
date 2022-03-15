@@ -5,17 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:import url="../template/header_css.jsp"></c:import>
 </head>
 <body>
-	<h1>${board} add Page</h1>
-	<form action="./add" method="POST">
-		<input type="text" name="title" placeholder="제목"> 
-		<textarea name="contents" rows="10" cols=""></textarea>
-		<input type="text" name="writer" placeholder="작성자">
-		<input type="submit" value="add">
+<c:import url="../template/header.jsp"></c:import>
+	<h1>${board} Add Page</h1>
+	
+	<form action="./add" method="post" enctype="multipart/form-data">
+		Title<input type="text" name="title">
+		Writer<input type="text" name="writer">
+		Contents<textarea name="contents" rows="" cols=""></textarea>
+		
+		<div>
+			<input type="file" name="files">
+			<input type="file" name="files">
+			<input type="file" name="files">
+		</div>
+		
+		<button type="submit">ADD</button>
+	
 	</form>
-
-
-
 </body>
 </html>
