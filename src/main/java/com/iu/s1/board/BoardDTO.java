@@ -1,6 +1,7 @@
 package com.iu.s1.board;
 
 import java.sql.Date;
+
 public class BoardDTO {
 	private Long num;
 	private String title;

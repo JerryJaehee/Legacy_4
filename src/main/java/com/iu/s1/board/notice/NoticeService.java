@@ -11,6 +11,7 @@ import com.iu.s1.board.BoardDTO;
 import com.iu.s1.board.BoardService;
 import com.iu.s1.util.FileManager;
 import com.iu.s1.util.Pager;
+
 @Service
 public class NoticeService implements BoardService{
 	

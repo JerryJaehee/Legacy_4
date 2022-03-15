@@ -3,6 +3,7 @@ package com.iu.s1.board;
 import java.util.List;
 
 import com.iu.s1.util.Pager;
+
 public interface BoardDAO {
 	//addFile
 	public int addFile(BoardFileDTO boardFileDTO)throws Exception;

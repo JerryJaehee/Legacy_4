@@ -9,8 +9,6 @@ public class MemberDTO {
 	private String email;
 	private MemberFileDTO memberFileDTO;
 	
-	
-	
 	public MemberFileDTO getMemberFileDTO() {
 		return memberFileDTO;
 	}

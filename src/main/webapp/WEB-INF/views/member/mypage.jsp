@@ -17,6 +17,5 @@
 	<a href="./photoDown?fileNum=${dto.memberFileDTO.fileNum}">${dto.memberFileDTO.oriName}</a>
 	<h3>${dto.memberFileDTO.oriName}</h3>
 	
-
 </body>
 </html>

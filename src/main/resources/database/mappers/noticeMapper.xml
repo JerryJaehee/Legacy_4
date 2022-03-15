@@ -108,7 +108,5 @@
  		delete notice where num=#{num}
  	</delete>
  	
- 	
- 	
  
  </mapper>  
