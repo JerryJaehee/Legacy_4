@@ -28,6 +28,6 @@
 		</c:if>
 	</div>
 	
-	<!-- 	<img alt="" src="./resources/upload/member/a53ff63b-667b-4163-a239-8dff3dfe91b6_iu1.jpg"> -->
+	 	<img alt="" src="./resources/upload/member/41a55895-dae4-433e-8ec6-1c9e86c8c77e_IMG_9169.jpg"> 
 </body>
 </html>
