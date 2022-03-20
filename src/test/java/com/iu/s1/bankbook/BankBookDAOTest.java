@@ -23,7 +23,7 @@ public class BankBookDAOTest extends MyJunitTest{
 		assertNotNull(bankBookDAO);
 	}
 	
-	@Test
+	//@Test
 	public void listTest() throws Exception {
 		Pager pager = new Pager();
 		pager.setPerPage(5L);
@@ -61,10 +61,10 @@ public class BankBookDAOTest extends MyJunitTest{
 	}
 	
 	//Detail
-	//@Test
+	@Test
 	public void detailTest() throws Exception {
 		BankBookDTO bankBookDTO = new BankBookDTO();
-		//bankBookDTO.setBookNumber(2L);
+		bankBookDTO.setBookNumber(399L);
 		bankBookDTO = bankBookDAO.detail(bankBookDTO);
 		assertNotNull(bankBookDTO);
 	}
