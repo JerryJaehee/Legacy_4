@@ -41,7 +41,7 @@ fileAdd.addEventListener("click", function() {
     fileResult.append(div);
 
     num++;
-})
+});
 
 fileResult.addEventListener("click",function(event) {
     let cn = event.target;
@@ -51,4 +51,34 @@ fileResult.addEventListener("click",function(event) {
         document.getElementById(delNum).remove();
         count--;
     }
-})
+});
+
+//-------------------------------------------------------
+const fileDeleteBtn = document.querySelectorAll(".fileDeleteBtn");
+const files = document.querySelector("#files");
+
+files.addEventListener("click", function(event) {
+    if(event.target.classList.contains("fileDeleteBtn")) {
+        let check = confirm("삭제시 복구 불가능합니다. 삭제하시겠습니까?");
+        if(!check) {
+            return ;
+        }
+        let fileNum = event.target.getAttribute("data-fileNum");
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "../qna/fileDelete");
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("fileNum="+fileNum);
+
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                if(this.responseText.trim()=='1') {
+                    console.log("file 삭제");
+                    event.target.parentNode.remove();          
+                }else{
+                    console.log("file 삭제 실패");
+                }
+            }
+        }
+    }
+});

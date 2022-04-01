@@ -18,6 +18,13 @@ public class QnaService implements BoardService {
 	private QnaDAO qnaDAO;
 	@Autowired
 	private FileManager fileManager;
+	
+	
+	public int fileDelete(QnaFileDTO qnaFileDTO) throws Exception {
+		//HDD에 파일 삭제 코드 작성
+		return qnaDAO.fileDelete(qnaFileDTO);
+	}
+	
 	public QnaFileDTO detailFile(QnaFileDTO qnaFileDTO) throws Exception{
 		return qnaDAO.detailFile(qnaFileDTO);
 	}

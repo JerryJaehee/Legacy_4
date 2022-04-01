@@ -31,10 +31,41 @@ public class NoticeReplyController {
 	}
 
 	@GetMapping("list")
-	public void list(NoticeReplyDTO noticeReplyDTO) throws Exception {
+	public ModelAndView list(NoticeReplyDTO noticeReplyDTO) throws Exception {
+		System.out.println("List!!!");
+		System.out.println(noticeReplyDTO.getNum());
 		List<NoticeReplyDTO> ar = noticeReplyService.list(noticeReplyDTO);
 		
 		System.out.println(ar);
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("noticeReply",ar);
+		mv.setViewName("common/noticeReply");
+		return mv;
+	}
+	
+	@PostMapping("delete")
+	public ModelAndView delete(NoticeReplyDTO noticeReplyDTO) throws Exception {
+		System.out.println(noticeReplyDTO.getReplyNum());
+		int result = noticeReplyService.delete(noticeReplyDTO);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("common/ajaxResult");
+		mv.addObject("result", result);
+		
+		return mv;
+		
+	}
+	
+	@PostMapping("update")
+	public ModelAndView update(NoticeReplyDTO noticeReplyDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		System.out.println(noticeReplyDTO.getContents());
+		System.out.println(noticeReplyDTO.getReplyNum());
+		int result = noticeReplyService.update(noticeReplyDTO);
+		System.out.println(result);
+		mv.setViewName("common/ajaxResult");
+		mv.addObject("result",result);
+		return mv;
 	}
 	
 }
